@@ -23,8 +23,25 @@ btn.addEventListener("click", function(event){
 
 function exercice3()
 {
+    let btn = document.getElementById("btn-add-ingredients");
     let ingredients = ["Salade", "Tomate", "Oignon"];
-}
+    btn.addEventListener("click", function(event){
+        
+        let ul = document.querySelector("ul");
+        let li = document.createElement("li");
+        let li2 = document.createElement("li");
+        let li3 = document.createElement("li");
+        let txt = document.createTextNode("Salade");
+        let txt2 = document.createTextNode("Tomate");
+        let txt3 = document.createTextNode("Oignon");
+    
+        li.appendChild(txt);
+        li2.appendChild(txt2);
+        li3.appendChild(txt3);
+        ul.appendChild(li);
+        ul.appendChild(li2);
+        ul.appendChild(li3);
+});}
 
 function exercice4()
 {
