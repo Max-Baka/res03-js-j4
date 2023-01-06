@@ -44,7 +44,7 @@ function exercice3()
 });}
 
 function exercice4()
-{
+{   
     let heroes = [
         {
             name : "Clark Kent",
@@ -59,6 +59,24 @@ function exercice4()
             secret: "Iron Man"
         }
     ];
+    let btn = document.getElementById("btn-add-hero");
+    let tbody = document.querySelector("tbody");
+    let count = 0;
+    btn.addEventListener("click", function(event){
+        let tr = document.createElement(tr);
+        let tdName = document.createElement(td);
+        let tdSecret = document.createElement(td);
+        let name = document.createTextNode(hero[count].name);
+        let secret = document.createTextNode(hero[count].secret)
+        
+        tbody.appendChild(tr);
+        tr.appendChild(tdName);
+        tr.appendChild(tdSecret);
+        tdName.appendChild(name);
+        tdSecret.appendChild(secret);
+        count++
+    });
+    
 }
 
 function exercice5()
